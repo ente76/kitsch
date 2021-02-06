@@ -87,7 +87,7 @@ The configuration has three segments: `settings` and `hideFromPanel` and `wallpa
 
 Plans. For whenever I will get bored again.
 
-... currently there are no improvements planned.
+- [ ] configuration UI
 
 ## License
 
