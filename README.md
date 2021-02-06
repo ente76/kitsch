@@ -82,6 +82,8 @@ The configuration has three segments: `settings` and `hideFromPanel` and `wallpa
     - remove activities button
     - remove application menu
     - shuffle wallpapers
+- v2: 06.02.2021
+  - adjusted the description in the metadata
 
 ## ToDo
 
