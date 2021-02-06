@@ -146,7 +146,8 @@ class Kitsch {
         }
         debug(this.wallpapers);
         this.wallpaper = new Gio.Settings({ 'schema': 'org.gnome.desktop.background' });
-        this.counter = -1;
+        this.counter = Settings.get_int("lastwp");
+        debug(this.counter);
         this.setWallpaper();
     }
 
@@ -155,7 +156,11 @@ class Kitsch {
             let r = Math.trunc(Math.random() * (this.wallpapers.length - 1));
             if (r >= this.counter) this.counter = r + 1
             else this.counter = r
-        } else this.counter += 1;
+        } else {
+            this.counter += 1;
+            if (this.counter >= this.wallpapers.length) this.counter = 0;
+        }
+        Settings.set_int("lastwp", this.counter);
         this.wallpaper.set_string('picture-uri', this.wallpapers[this.counter]);
         this.timer = GLib.timeout_add(GLib.PRIORITY_DEFAULT, this.config.wallpaper.interval * 1000, this.setWallpaper.bind(this));
     }

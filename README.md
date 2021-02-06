@@ -71,6 +71,7 @@ The configuration has three segments: `settings` and `hideFromPanel` and `wallpa
 - paths: ([]) list of paths to files or folders
   - if a path is a folder, it will be parsed no matter the settings of recursive; only for folders inside such path, the setting matters
   - **BE CAREFUL** with large folders and the recursive setting: it may break gnome
+  - Folders are read during startup only. Changes to the folder are not recognized.
 - mimetypes: ([]) mime types to use for wallpapers
   - **BE AWARE**: if you don't know exactly what you are doing, leave it alone
 
