@@ -1,0 +1,21 @@
+{
+  "settings": {
+    "loglevel": "debug"
+  },
+  "hideFromPanel": {
+    "activities": true,
+    "appMenu": true
+  },
+  "wallpaper": {
+    "interval": 600,
+    "recursive": true,
+    "shuffle": true,
+    "paths": [
+      "~/Pictures"
+    ],
+    "mimetypes": [
+      "image/jpeg",
+      "image/png"
+    ]
+  }
+}

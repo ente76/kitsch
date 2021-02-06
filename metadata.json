@@ -1,0 +1,11 @@
+{
+    "uuid": "kitsch@fopdoodle.net",
+    "name": "Kitsch",
+    "description": "Kitsch is a collection of cheap, popular, and marketable improvements to Gnome. One could consider it applying a cosmetic surgery to Gnome.\n\nKitsch can easily be configured and offers the following features:\n- remove application menu from the top bar\n- remove the activity button from the top bar\n- periodically change the background picture",
+    "version": 1,
+    "url": "https://github.com/ente76/kitsch/",
+    "settings-schema": "org.gnome.shell.extensions.kitsch",
+    "shell-version": [
+        "3.38"
+    ]
+}

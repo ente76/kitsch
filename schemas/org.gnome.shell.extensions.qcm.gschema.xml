@@ -1,0 +1,12 @@
+<!-- Kitsch: a collection of cheap, popular, and marketable improvements to Gnome
+     Copyright (C) 2021 Christian Klaue (mail@ck76.de) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema path="/org/gnome/shell/extensions/kitsch/" id="org.gnome.shell.extensions.kitsch">
+    <key type="s" name="config">
+        <default>".config/kitsch.json"</default>
+    	  <summary>Config File Path</summary>
+        <description>Absolute path to your configuration file. Leave empty to use ~/.config/kitsch.json.</description>
+    </key>
+  </schema>
+</schemalist>
