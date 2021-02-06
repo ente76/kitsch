@@ -44,7 +44,7 @@ The configuration has three segments: `settings` and `hideFromPanel` and `wallpa
 }
 ```
 
-### Settings
+### settings
 
 - `loglevel`: (string) the log level of the extenions. any of the following values is valid:
   - `debug`
@@ -54,13 +54,43 @@ The configuration has three segments: `settings` and `hideFromPanel` and `wallpa
 
 ### hideFromPanel
 
-- activities: (boolean) hide the activities button on the left of the top bar
-- appMenu: (boolean) hide the application menu on the top bar
+- activities: (boolean) hide the activities button on the left of the top bar  
+![no activities button](activities.png)
+
+- appMenu: (boolean) hide the application menu on the top bar  
+![no application menu](appMenu.png)
 - *: (boolean) one can add any item that refers to a direct child of imports.ui.main.panel.statusArea
+
+### wallpaper
+
+![wallpaper](wallpaper.png)
+
+- interval: (number) interval to update the wallpaper in seconds
+- recursive: (boolean) whether to read folders recursively
+- shuffle: (boolean) change the wallpapers in order they appear or shuffled
+- paths: ([]) list of paths to files or folders
+  - if a path is a folder, it will be parsed no matter the settings of recursive; only for folders inside such path, the setting matters
+  - **BE CAREFUL** with large folders and the recursive setting: it may break gnome
+- mimetypes: ([]) mime types to use for wallpapers
+  - **BE AWARE**: if you don't know exactly what you are doing, leave it alone
+
+## Change History
+
+- v1: 06.02.2021
+  - initial version:
+    - remove activities button
+    - remove application menu
+    - shuffle wallpapers
+
+## ToDo
+
+Plans. For whenever I will get bored again.
+
+... currently there are no improvements planned.
 
 ## License
 
-Guillotine: a gnome extension designed for efficiently carrying out executions of commands from a customizable menu
+Kitsch: a collection of cheap, popular, and marketable improvements to Gnome
 Copyright (C) 2021 Christian Klaue [mail@ck76.de]
 
 This program is free software: you can redistribute it and/or modify
