@@ -201,12 +201,12 @@ class Kitsch {
             let child;
             while ((child = childs.next_file(null)) !== null)
                 if ((child.get_file_type() === Gio.FileType.DIRECTORY) && recursive) this.loadFD(fd.resolve_relative_path(child.get_name()), this.config.wallpaper.recursive);
-                else if (child.get_file_type() === Gio.FileType.UNKNOWN) error("location " + child.get_path() + " cannot be accessed.");
+                else if (child.get_file_type() === Gio.FileType.UNKNOWN) debug("file ignored / unknown mime type: " + child.get_path());
                 else if (this.config.wallpaper.mimetypes.includes(child.get_content_type())) this.wallpapers.push(fd.resolve_relative_path(child.get_name()).get_path());
-                else error("location " + child.get_name() + " was ignored");
-        } else if (info.get_file_type() === Gio.FileType.UNKNOWN) error("location " + info.get_path() + " cannot be accessed.");
+                else debug("file ignored / mime type: " + child.get_name());
+        } else if (info.get_file_type() === Gio.FileType.UNKNOWN) debug("file ignored / unknown mime type: " + info.get_path());
         else if (this.config.wallpaper.mimetypes.includes(info.get_content_type())) this.wallpapers.push(fd.get_path());
-        else error("location " + fd.get_path() + " is something unexpected: " + type);
+        else debug("file ignored / mime type: " + fd.get_path());
     }
 
 }

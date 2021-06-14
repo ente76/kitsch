@@ -84,6 +84,12 @@ The configuration has three segments: `settings` and `hideFromPanel` and `wallpa
     - shuffle wallpapers
 - v2: 06.02.2021
   - adjusted the description in the metadata
+- v3: 07.04.2021
+  - version bump for gnome 40
+- v4: 14.06.2021
+  - adjusted gnome shell version requirement
+  - adjusted verbosity when parsing folders
+  - adjusted default verbosity level to warning
 
 ## ToDo
 
