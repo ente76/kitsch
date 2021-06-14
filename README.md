@@ -90,6 +90,8 @@ The configuration has three segments: `settings` and `hideFromPanel` and `wallpa
   - adjusted gnome shell version requirement
   - adjusted verbosity when parsing folders
   - adjusted default verbosity level to warning
+- v5: 14.06.2021
+  - load log level from settings
 
 ## ToDo
 

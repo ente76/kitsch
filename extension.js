@@ -15,7 +15,7 @@ const DEBUG = 0;
 const INFO = 1;
 const WARNING = 2;
 const ERROR = 3;
-var LogLevel = DEBUG;
+var LogLevel = INFO;
 
 /******************************************************************************/
 /***** LOGGING                                                            *****/
@@ -97,6 +97,7 @@ class Kitsch {
     }
 
     start() {
+        LogLevel = 1;
         try {
             // determine config location
             let configFilename = Settings.get_string("config");
@@ -128,6 +129,9 @@ class Kitsch {
             notify("Loading config failed due to an error.", error);
             return;
         }
+
+        LogLevel = ["debug", "info", "warning", "error"].indexOf(this.config.loglevel.toLowerCase());
+        info("Log level at: " + this.config.loglevel);
 
         this.elements = {};
         if (this.config.hideFromPanel) {
