@@ -92,6 +92,8 @@ The configuration has three segments: `settings` and `hideFromPanel` and `wallpa
   - adjusted default verbosity level to warning
 - v5: 14.06.2021
   - load log level from settings
+- v6: 11.04.2022
+  - add compatibility for gnome 41 & 42
 
 ## ToDo
 
